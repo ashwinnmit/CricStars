@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        body{
+    text-align: center;
+    margin: 0;
+    padding:0;
+}
+
+.heading h1{
+    font-size: 3rem;
+    display : inline-block;
+    font-family: 'Roboto', sans-serif;
+    font-weight : bolder;
+    position: relative;
+    z-index: 3;
+    color : white;
+    opacity: 0.7;
+}
+
+.heading h1:hover{
+    animation-name: popUp;
+    animation-duration: 700ms;
+    animation-iteration-count: 1;
+    animation-timing-function : ease-in-out;
+
+}
+@keyframes popUp {
+    0%{
+        transform : translateY(0px);
+    }
+    50%{
+        transform : translateY(-30px);
+    }
+    99%{
+        transform: translateY(15px);
+    }
+}
+@keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+
+@keyframes move-clouds-back {
+    from {background-position:0 0;}
+    to {background-position:10000px 0;}
+}
+
+
+        .stars, .twinkling, .clouds{
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    width:100%;
+    height:100%;
+    display:block;
+}
+  
+.stars {
+    background:#000 url(stars.png) repeat top center;
+    z-index:0;
+}
+  
+.twinkling{
+    background:transparent url(twinkling.png) repeat top center;
+    z-index:1;
+    animation:move-twink-back 200s linear infinite;
+}
+  
+.clouds{
+      background:transparent url(clouds.png) repeat top center;
+      z-index:2;
+      opacity: .4;
+      animation:move-clouds-back 200s linear infinite;
+}
+
+    .indexing{
+        z-index : 2;
+        width: 525px;
+        height : 350px;
+    }
+    .image{
+      position : absolute;
+      left : 40vw;
+      top : 10vh;
+    }
+    </style>
+</head>
+<body>
+  <div class="stars"></div>
+  <div class="twinkling"></div> 
+  <div class="clouds"></div>
+
+    <div class="container">
+       <div class="heading">
+        <h1>C</h1>
+        <h1>r</h1>
+        <h1>i</h1>
+        <h1>c</h1>
+        <h1>S</h1>
+        <h1>t</h1>
+        <h1>a</h1>
+        <h1>r</h1>
+        <h1>s</h1>
+    </div>
+    <div id="carouselExampleIndicators" class="carousel slide indexing" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active one" aria-current="true" aria-label="Slide 1" name="nz"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2" class="two" name="eng"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3" class="three" name="ind"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4" class="four" name="pak"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5" class="five" name="aus"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6" class="six" name="sa"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" aria-label="Slide 7" class="seven" name="ban"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7" aria-label="Slide 8" class="eight" name="sl"></button>
+          
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="aus.jpeg" class="d-block w-100" alt="New Zealand">
+          </div>
+          <div class="carousel-item">
+            <img src="BCCI-Logo.jpg" class="d-block w-100" alt="England">
+          </div>
+          <div class="carousel-item">
+            <img src="southAfrica.jpg" class="d-block w-100" alt="India">
+          </div>
+          <div class="carousel-item">
+            <img src="England.jpg" class="d-block w-100" alt="Pakistan">
+          </div>
+          <div class="carousel-item">
+            <img src="Silver_fern_flag.png" class="d-block w-100" alt="Australia">
+          </div>
+          <div class="carousel-item">
+            <img src="Pakistan.png" class="d-block w-100" alt="South Africa">
+          </div>
+          <div class="carousel-item">
+            <img src="SriLanka.jpg" class="d-block w-100" alt="Bangladesh">
+          </div>
+          <div class="carousel-item">
+            <img src="WestIndies.jpg" class="d-block w-100" alt="Sri Lanka">
+          </div>
+        </div>
+        <img src="test/test_aus.png" class="image">
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+      var myCarousel = document.querySelector('#myCarousel')
+var carousel = new bootstrap.Carousel(myCarousel, {
+  interval: false,
+  wrap: false
+})
+
+// detecting events in the down button
+
+document.querySelector(".two").addEventListener("click", function (){
+    var country = this.getAttribute("aria-label");
+    // england
+    var img_path = "test/ind_test.png";
+    document.querySelector(".image").setAttribute("src", img_path);
+});
+document.querySelector(".three").addEventListener("click", function (){
+    var country = this.getAttribute("aria-label");
+    // india
+    var img_path = "test/test_sa.png";
+    document.querySelector(".image").setAttribute("src", img_path);
+});
+document.querySelector(".four").addEventListener("click", function (){
+    var country = this.getAttribute("aria-label");
+    // Pakistan
+    var img_path = "test/test_eng.png";
+    document.querySelector(".image").setAttribute("src", img_path);
+});
+document.querySelector(".five").addEventListener("click", function (){
+    var country = this.getAttribute("aria-label");
+    //australia
+    var img_path = "test/test_nz.png";
+    document.querySelector(".image").setAttribute("src", img_path);
+});
+document.querySelector(".six").addEventListener("click", function (){
+    var country = this.getAttribute("aria-label");
+    // south africa
+    var img_path = "test/pak_test.png";
+    document.querySelector(".image").setAttribute("src", img_path);
+});
+document.querySelector(".seven").addEventListener("click", function (){
+    var country = this.getAttribute("aria-label");
+    // Bangladesh
+    var img_path = "test/test_sl.png";
+    document.querySelector(".image").setAttribute("src", img_path);
+});
+document.querySelector(".eight").addEventListener("click", function (){
+    var country = this.getAttribute("aria-label");
+    // Srilanka
+    var img_path = "test/ban_test.png";
+    document.querySelector(".image").setAttribute("src", img_path);
+});
+document.querySelector(".one").addEventListener("click", function (){
+    var country = this.getAttribute("aria-label");
+    // New Zealand
+    var img_path = "test/test_aus.png";
+    document.querySelector(".image").setAttribute("src", img_path);
+});
+    </script>
+</body>
+</html>
